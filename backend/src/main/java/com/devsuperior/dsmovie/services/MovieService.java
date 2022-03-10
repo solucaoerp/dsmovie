@@ -16,11 +16,22 @@ public class MovieService {
 	@Autowired
 	private MovieRepository repository;
 
-	/* paginated search */
+	/* paginated search list */
 	@Transactional(readOnly = true)
 	public Page<MovieDTO> findAll(Pageable pageable) {
 		Page<Movie> result = repository.findAll(pageable); /* the repository talks to the entity and returns the dto */
 		Page<MovieDTO> page = result.map(x -> new MovieDTO(x));
 		return page;
+	}
+	
+	/* paginated search list by Id */
+	@Transactional(readOnly = true)
+	public MovieDTO findById(Long id) {
+		
+		/* TODO: treatment: see if the id exists */
+		
+		Movie result = repository.findById(id).get(); /* the repository talks to the entity and returns the dto */
+		MovieDTO dto = new MovieDTO(result);
+		return dto;
 	}
 }
