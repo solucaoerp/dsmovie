@@ -24,7 +24,7 @@ public class MovieService {
 		return page;
 	}
 	
-	/* paginated search list by Id */
+	/* paginated search by Id */
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
 		
