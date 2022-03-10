@@ -23,13 +23,13 @@ public class MovieService {
 		Page<MovieDTO> page = result.map(x -> new MovieDTO(x));
 		return page;
 	}
-	
+
 	/* paginated search by Id */
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
-		
+
 		/* TODO: treatment: see if the id exists */
-		
+
 		Movie result = repository.findById(id).get(); /* the repository talks to the entity and returns the dto */
 		MovieDTO dto = new MovieDTO(result);
 		return dto;
