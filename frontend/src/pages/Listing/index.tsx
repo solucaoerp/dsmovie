@@ -30,14 +30,18 @@ export default function Listing() {
             .then(response => {
                 const data = response.data as MoviePage;
                 //console.log(response.data); // to check debug on browser
-                setPageNumber(data.number);   // setPageNumber used only to not generate warning
+                //setPageNumber(data.number); // setPageNumber used only to not generate warning
                 setPage(data);                // saves the page returned in the request
             });
-    }, [pageNumber]);                         // the second parameter of useEffect, depends on pageNumber
+    }, [pageNumber]);                         // the second parameter of useEffect, depends on pageNumber (Observer), to execute this function again
+
+    const handlePageChange = (newPageNumber: number) => {
+        setPageNumber(newPageNumber);
+    }
 
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange} />
             <div className="container">
                 <div className="row">
 
