@@ -1,4 +1,4 @@
-// tipos extraídos da requisição JSON
+// types extracted from JSON request
 
 export type Movie = {
     id: number;
