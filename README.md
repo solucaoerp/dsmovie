@@ -25,6 +25,16 @@
   - [CORS Receitas de Codigo]
   - [CORS Help Dev]
 
+## Backend Tools
+ - Spring Tool Suite 4 version 4.13.1.RELEASE
+ - H2 Database
+ - Local Database: PostgreSQL 12.4 64-bit
+ - Remote Database: PostgreSQL 13.6 64-bit  
+
+## Frontend Tools
+ - Postman version 9.14.13
+ - Visual Studio Code version 1.65.2 
+
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
    [DevSuperior GitHub]: <https://github.com/devsuperior/sds-dsmovie>
    [DevSuperior Youtube]: <https://www.youtube.com/devsuperior>
